@@ -1,0 +1,433 @@
+<!--====== Header Start ======-->
+<style>
+    /* Modal Style */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+      padding-top: 60px;
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    /* Background overlay */
+    .referral-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+  
+    /* Modal box */
+    .referral-box {
+      background: #0f1d33;
+      padding: 25px;
+      width: 100%;
+      
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 255, 140, 0.4);
+      border: 3px solid #00ff88;
+      animation: fadeIn 0.3s ease-out;
+    }
+  
+    /* Close button */
+    .referral-close {
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+      color: #00ff88;
+      transition: 0.2s;
+    }
+  
+    .referral-close:hover {
+      color: #00ffaa;
+    }
+  
+    /* Title */
+    .referral-title {
+      margin-top: 10px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #00ffb3;
+      text-shadow: 0 0 8px rgba(0,255,130,0.7);
+    }
+  
+    /* Input */
+    .referral-input {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #00ff88;
+      background: #0b1729;
+      color: #00ffcc;
+      font-size: 1rem;
+      text-align: center;
+      outline: none;
+    }
+  
+    /* Button */
+    .referral-btn {
+      margin-top: 18px;
+      width: 100%;
+      padding: 12px;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #00ff88, #00dd66);
+      color: #082016;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 0 12px rgba(0,255,120,0.7);
+      transition: 0.2s;
+    }
+  
+    .referral-btn:hover {
+      box-shadow: 0 0 18px rgba(0,255,120,1);
+      transform: translateY(-2px);
+    }
+  
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+<header>
+    <div class="header-top" style="background-color: #0e1011;">
+        <div class="header-left">
+            <a>
+                <!-- <img src="../../Aviator/images/logo.png" class="logo1" /> -->
+                <img src="/images/banners/logo.png" class="logo1" />
+            </a>
+        </div>
+        <div class="header-right d-flex align-items-center">
+            <a>
+                <button class="deposite-btn rounded-pill d-flex align-items-center me-2" onclick="window.location.href='/wallet/recharge'">
+                    <span class="material-symbols-outlined me-2"> payments </span>
+                    <!-- <span>$</span> -->
+                    <span class="me-2" id="header_wallet_balance">₹<%= typeof money === 'number' ? money.toLocaleString('en-IN') : money %></span>
+                    Depositar
+                </button>
+            </a>
+            <div class="btn-group">
+                <button type="button"
+                    class="btn btn-transparent dropdown-toggle p-0 d-flex align-items-center justify-content-center caret-none"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-symbols-outlined f-24 menu-icon text-white">
+                        menu
+                    </span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark profile-dropdown p-0">
+                        <li class="profile-head d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="{{user('image')}}" class="avtar-ico" id="avatar_img">
+                                <div>
+                                    <div class="profile-name mb-1"><%= username %></div>
+                                    <div class="profile-name" id="username"></div>
+                                </div>
+
+                            </div>
+                        </li>
+					
+			
+			
+
+            <li>
+                <a href="/aviator/" class="f-12 justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="material-symbols-outlined ico f-20">
+                            flight_takeoff
+                        </span>
+                        <img src="../../Aviator/images/logo.svg" class="side_logo">
+
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="/wallet/recharge" class="f-12 justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="material-symbols-outlined ico f-20">
+                            payments
+                        </span>Depositar Fundos
+                    </div>
+                </a>
+            </li>
+            <li>
+
+                <li>
+                    <a href="/wallet/withdrawal" class="f-12 justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <span class="material-symbols-outlined ico f-20">
+                                payments
+                            </span>Sacar Fundos da Conta
+                        </div>
+                    </a>
+                </li>
+                <li>
+
+                    <li>
+                        <a href="/wallet/rechargerecord" class="f-12 justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <span class="material-symbols-outlined ico f-20">
+                                    payments
+                                </span>Histórico de Transações
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <li>
+                            <a href="#" onclick="showReferralPopup()"  class = "f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>Código de Indicação
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+
+                        <li>
+                            <a   class="f-12 justify-content-between" onclick="signOut()">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>Sair
+                                </div>
+                            </a>
+                        </li>
+                        <% if (ekyc === false || ekyc ==0) { %>
+                            <li>
+                              <a href="/ekyc" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                  <span class="material-symbols-outlined ico f-20">payments</span>
+                                  E-KYC
+                                </div>
+                              </a>
+                            </li>
+                          <% } %>                        
+					<!-- <li>
+                <a class="f-12 justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <span class="material-symbols-outlined ico f-20">
+                            mode_fan
+                        </span>ANIMATION
+                    </div>
+                    <div>
+                        <div class="form-check form-switch lg-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="animation" checked="">
+                            <label class="form-check-label" for="animation"></label>
+                        </div>
+                    </div>
+                </a>
+            </li> -->
+					<li class="divider"> </li>
+                        <!-- <li>
+                            <a href="/crash" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        flight_takeoff
+                                    </span>
+                                    <img src="../../Aviator/images/logo.svg" class="side_logo">
+                                </div>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="/deposit" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>DEPOSIT FUNDS
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/withdraw" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>WITHDRAW FUNDS FROM THE ACCOUNT
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/amount-transfer" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>AMOUNT TRANSFER
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/profile" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        account_circle
+                                    </span>PERSONAL DETAILS
+                                </div>
+                            </a>
+                        </li>
+                        {{-- <li>
+                            <a href="#" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>TRANSFER FUNDS
+                                </div>
+                            </a>
+                        </li> --}}
+                        <li>
+                            <a href="/deposit_withdrawals" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>TRANSACTION HISTORY
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/level-management" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>LEVEL MANAGEMENT
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/referal" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>REFERRAL
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout" class="f-12 justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <span class="material-symbols-outlined ico f-20">
+                                        payments
+                                    </span>SIGN OUT
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- <div class="header-bottom ">
+        <div class="header-left">
+            <img src="../../Aviator/images/logo.svg" class="logo" />
+        </div>
+        <div class="header-right d-flex align-items-center">
+            <button class="btn btn-warning m-font-0 rounded-pill py-1 px-2 f-14 d-flex align-items-center h-26" data-bs-toggle="modal" data-bs-target="#how-to-play">
+            <span class="material-symbols-outlined f-18 me-1">
+                help
+            </span> How to Play
+        </button>
+            <div class="wallet-balance h-26">
+                <span id="wallet_balance">{{ wallet(user('id')) }}</span>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="referralModal"  style="display:none;" class="referral-overlay">
+        <div class="referral-box">
+          <span class="referral-close" onclick="closeReferralPopup()">&times;</span>
+      
+          <h2 class="referral-title">Seu Código de Indicação</h2>
+      
+          <input 
+            type="text"
+            id="referralCodeInput"
+            class="referral-input"
+            value="https://wongo.site?refer=76890"
+            readonly
+          >
+      
+          <button class="referral-btn" onclick="copyReferralCode()">
+            Copiar Código de Indicação
+          </button>
+        </div>
+      </div>
+</header>
+
+<script>
+    // Show Referral Code Pop-up
+    function showReferralPopup() {
+      document.getElementById('referralModal').style.display = "block";
+    }
+  
+    // Close the Referral Code Pop-up
+    function closeReferralPopup() {
+      document.getElementById('referralModal').style.display = "none";
+    }
+  
+    // Copy the Referral Code
+    function copyReferralCode() {
+      const copyText = document.getElementById("referralCodeInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+  
+      // Optional: Alert user that the code was copied
+      alert("Referral code copied: " + copyText.value);
+    }
+    function signOut() {
+    // Delete the token and auth cookies
+    deleteCookie('token');
+    deleteCookie('auth');
+
+    // Optionally, redirect the user to the login page or home page
+    window.location.href = '/home';  // or any other page
+}
+  </script>
+
+
+
+
+<!--====== Header End ======-->
