@@ -10,28 +10,43 @@
       href="/images/banners/logo.png"
       type="image/x-icon"
     />
-    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/png" />
+    <link
+      rel="shortcut icon"
+      href="{{ asset('images/logo.png') }}"
+      type="image/png"
+    />
 
     <!--====== Material Design Icons CSS ======-->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-        <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!--====== mCustomScrollbar CSS ======-->
-    <link rel="stylesheet" href="/Aviator/css/jquery.mCustomScrollbar.min.css" />
+    <link
+      rel="stylesheet"
+      href="/Aviator/css/jquery.mCustomScrollbar.min.css"
+    />
 
     <!--====== Pretty Checkbox CSS ======-->
     <link rel="stylesheet" href="Aviator/css/pretty-checkbox.min.css" />
     <!--====== Cuntry Selection CSS ======-->
     <link rel="stylesheet" href="Aviator/css/niceCountryInput.css" />
-    <link rel="stylesheet" type="text/css" href="Aviator/css/jquery.ccpicker.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Aviator/css/jquery.ccpicker.css"
+    />
 
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="/Aviator/css/bootstrap.css" />
@@ -49,13 +64,18 @@
     <link rel="stylesheet" href="/Aviator/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="/Aviator/css/responsive.dataTables.min.css" />
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
 
     <!--====== Material Design Icons CSS ======-->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet"> -->
-    
+
     <!-- ========== EMBEDDED CSS FOR POPUP AND CORE STYLES ========== -->
     <style>
       /* --- Your Existing home.ejs styles --- */
@@ -253,7 +273,7 @@
         box-sizing: border-box;
       }
       .popup-content {
-        background-color: #011142;
+        background-color: #134611;
         color: #ffffff;
         padding: 20px 25px;
         border-radius: 10px;
@@ -340,7 +360,7 @@
       }
 
       /* Labels */
-     
+
       #loginPopupOverlay .popup-content .phoneInput__container-label,
       #loginPopupOverlay .popup-content .input-label,
       #loginPopupOverlay .popup-content .Name__container-label,
@@ -771,245 +791,556 @@
       }
     </style>
 
-<style>
-  .withdrawal-box2 {
-    background: linear-gradient(135deg, #0e1f40, #1b355b);
-    border-radius: 20px;
-    padding: 25px;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    border: 2px solid rgba(255,255,255,0.1);
-    /* width: 300px; */
-    margin: 20px auto;
-  }
+    <style>
+      .withdrawal-box2 {
+        background: linear-gradient(135deg, #0e1f40, #1b355b);
+        border-radius: 20px;
+        /* padding: 25px; */
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        /* width: 300px; */
+        margin: 20px auto;
+      }
 
-  .withdrawal-box2 #name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #ffde59, #ffb400);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 12px;
-  }
+      .withdrawal-box2 #name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, #ffde59, #ffb400);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* margin-bottom: 12px; */
+      }
 
-  .withdrawal-label2 {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
+      .withdrawal-label2 {
+        font-size: 1rem;
+        opacity: 0.9;
+      }
 
-  .withdrawal-amount2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 5px;
-    background: linear-gradient(90deg, #00ffcc, #00d4ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-</style>
+      .withdrawal-amount2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 5px;
+        background: linear-gradient(90deg, #00ffcc, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
 
+    <style>
+      .game-btn {
+        /* width: 100%; */
+        padding: 14px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-radius: 35px;
+        border: none;
+        text-transform: uppercase;
+        transition: 0.2s;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #ff006e, #ff4d4d);
+        color: #fff;
+        box-shadow: 0 0 12px rgba(255, 0, 80, 0.6);
+      }
 
+      .game-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px rgba(255, 0, 80, 0.9);
+      }
 
-<style>
-  .game-btn {
-    width: 100%;
-    padding: 14px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 12px;
-    border: none;
-    text-transform: uppercase;
-    transition: 0.2s;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, #ff006e, #ff4d4d);
-    color: #fff;
-    box-shadow: 0 0 12px rgba(255, 0, 80, 0.6);
-  }
+      .login-btn {
+        background: #008000;
+        box-shadow: 0 0 12px rgba(0, 180, 255, 0.6);
+      }
 
-  .game-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(255, 0, 80, 0.9);
-  }
+      .login-btn:hover {
+        box-shadow: 0 0 20px rgba(0, 180, 255, 0.9);
+      }
+    </style>
 
-  .login-btn {
-    background: linear-gradient(135deg, #0099ff, #00d4ff);
-    box-shadow: 0 0 12px rgba(0, 180, 255, 0.6);
-  }
+    <style>
+      .game-header {
+        background: linear-gradient(135deg, #0c1b31, #172a45);
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
 
-  .login-btn:hover {
-    box-shadow: 0 0 20px rgba(0, 180, 255, 0.9);
-  }
-</style>
+      .game-header img {
+        height: 42px;
+      }
 
-<style>
-  .game-header {
-    background: linear-gradient(135deg, #0c1b31, #172a45);
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  }
+      .game-auth-btn {
+        padding: 8px 18px;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border: none;
+        text-transform: uppercase;
+        background: linear-gradient(135deg, #008000, #008000);
+        color: #fff;
+        transition: 0.25s;
+        box-shadow: 0 0 10px rgba(255, 94, 0, 0.5);
+      }
 
-  .game-header img {
-    height: 42px;
-  }
+      .game-auth-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px rgba(255, 94, 0, 0.8);
+      }
 
-  .game-auth-btn {
-    padding: 8px 18px;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    border: none;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #ff7a00, #ff4d00);
-    color: #fff;
-    transition: 0.25s;
-    box-shadow: 0 0 10px rgba(255, 94, 0, 0.5);
-  }
+      .game-header-btns {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
 
-  .game-auth-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(255, 94, 0, 0.8);
-  }
+    <style>
+      .support-box {
+        width: 100%;
+        text-align: center;
+        margin: 15px 0;
+      }
 
-  .game-header-btns {
-    display: flex;
-    gap: 10px;
-  }
-</style>
+      .support-action-btn {
+        display: inline-block;
+        padding: 8px 25px;
+        font-size: 1.05rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        background: #008000;
+        color: #fff;
+        letter-spacing: 0.8px;
+        box-shadow: 0 0 12px rgba(0, 170, 255, 0.6);
+        transition: 0.25s;
+        width: 100%;
+      }
 
-<style>
-  .support-box {
-    width: 100%;
-    text-align: center;
-    margin: 15px 0;
-  }
+      .support-action-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 18px rgba(0, 170, 255, 0.9);
+      }
 
-  .support-action-btn {
-    display: inline-block;
-    padding: 8px 25px;
-    font-size: 1.05rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    background: linear-gradient(135deg, #00d4ff, #0094ff);
-    color: #fff;
-    letter-spacing: 0.8px;
-    box-shadow: 0 0 12px rgba(0, 170, 255, 0.6);
-    transition: 0.25s;
-    width: 100%;
-    
-  }
+      .promo-banner-img {
+        margin: 7px;
+        width: 93%;
+        border-radius: 18px;
 
-  .support-action-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 18px rgba(0, 170, 255, 0.9);
-  }
+        /* 4px neon green border */
+        border: 1px solid red;
 
-  .promo-banner-img {
-    margin: 7px;
-    width: 93%;
-    border-radius: 18px;
+        /* green glow effect */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 35px rgba(255, 0, 4, 0.6);
 
-    /* 4px neon green border */
-    border: 1px solid red;
+        transition: 0.25s;
+      }
 
-    /* green glow effect */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 
-                0 0 35px rgba(255, 0, 4, 0.6);
+      .promo-banner-img:hover {
+        box-shadow: 0 0 30px rgba(0, 255, 102, 1),
+          0 0 45px rgba(0, 255, 102, 0.9);
+        transform: scale(1.01);
+      }
+    </style>
 
-    transition: 0.25s;
-  }
+    <style>
+      /* POWERED BY capsule container */
+      .powered-badge {
+        justify-content: center;
+        text-align: center;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #000;
+        padding: 10px 14px;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      }
 
-  .promo-banner-img:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 102, 1),
-                0 0 45px rgba(0, 255, 102, 0.9);
-    transform: scale(1.01);
-  }
-</style>
+      .powered-badge-text {
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+      }
+
+      .powered-badge img {
+        height: 32px;
+        filter: brightness(1.2);
+      }
+    </style>
+
+    <style>
+      .av-icon-chat {
+        width: 64px;
+        height: 57.6px;
+        min-height: 58px;
+        background: url(/images/banners/av-icon.svg) no-repeat;
+      }
+
+      .av-icon-bets {
+        width: 67px;
+        height: 48px;
+        min-height: 58px;
+        background: url(/images/banners/av-icon-cam.svg) no-repeat;
+      }
+
+      .av-icon-stats {
+        width: 67px;
+        height: 48px;
+        min-height: 58px;
+        background: url(/images/banners/av-stats.svg) no-repeat;
+      }
+
+      .img-chat {
+        width: 282px;
+        height: 80px;
+        min-height: 100px;
+        background: url(/images/banners/av-chat.png) no-repeat;
+      }
+
+      .img-bets {
+        width: 282px;
+        height: 73px;
+        min-height: 100px;
+        background: url(/images/banners/av-bets.png) no-repeat;
+      }
+
+      .img-stats {
+        width: 276px;
+        height: 80px;
+        min-height: 100px;
+        background: url(/images/banners/av-stats-img.png) no-repeat;
+      }
+
+      .icon-in {
+        width: 23px;
+        height: 21px;
+        background: url(in.b74b82d2b0240343.svg) no-repeat;
+      }
+
+      .icon-linkedin {
+        width: 32px;
+        height: 32px;
+        background: url(linkedin-logo.634782228cc3c34a.svg) no-repeat;
+      }
+
+      .icon-fb {
+        width: 13px;
+        height: 21px;
+        background: url(fb.c8b4cdf39426c655.svg) no-repeat;
+      }
+
+      .icon-tw {
+        width: 26px;
+        height: 22px;
+        background: url(tw.17dd79cf8d675a15.svg) no-repeat;
+      }
+
+      .icon-rtp {
+        width: 81px;
+        height: 81px;
+        min-height: 90px;
+        background: url(icon-rtp.a2016d8205d94fb1.svg) no-repeat;
+      }
+
+      .icon-multilanguage {
+        width: 80px;
+        height: 80px;
+        min-height: 90px;
+        background: url(icon-multilanguage.8acb2ac764a604cf.svg) no-repeat;
+      }
+
+      .icon-arrow {
+        width: 16px;
+        height: 13px;
+        background: url(arrow.c346fa61d8fd8b00.svg) no-repeat;
+      }
+    </style>
 
     <!-- ========== EMBEDDED CSS END ========== -->
   </head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-99RTD5DZML"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-99RTD5DZML"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-99RTD5DZML');
-</script>
-  <body style="background-image: url(shooting_star.gif);background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;">
+    gtag("config", "G-99RTD5DZML");
+  </script>
+  <body
+    style="
+      background-image: url(shooting_star.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 0px 2px;
+    "
+  >
     <!-- =============================== -->
     <!-- Existing Home Page Content      -->
     <!-- =============================== -->
-    <% if (money !== false) { %>
-      <%- include('headerxxx', { money, ekyc ,username}) %>
-    <% } else { %>
-      <div class="game-header">
-        <img src="/images/banners/logo.png" alt="Aviator Logo" />
-      
-        <div class="game-header-btns">
-          <button id="openLoginPopupBtn" class="game-auth-btn">Entrar</button>
-          <button id="openRegisterPopupBtn" class="game-auth-btn">Registrar</button>
-        </div>
+    <% if (money !== false) { %> <%- include('headerxxx', { money, ekyc
+    ,username}) %> <% } else { %>
+    <div class="game-header">
+      <img src="/images/banners/logo.png" alt="Aviator Logo" />
+
+      <div class="game-header-btns">
+        <button id="openLoginPopupBtn" class="game-auth-btn">Entrar</button>
+        <button id="openRegisterPopupBtn" class="game-auth-btn">
+          Registrar
+        </button>
       </div>
+    </div>
     <% } %>
-    
-    
+
     <!-- SUPPORT BUTTON + PROMO IMAGE -->
-<div class="support-box">
-  <div
-    class="support-action-btn"
-    onclick="window.location.href='<%= typeof telegram !== 'undefined' ? telegram : '#' %>'"
-  >
-  Suporte ao Cliente
-  </div>
+    <div class="support-box">
+      <div
+        class="support-action-btn"
+        onclick="window.location.href='<%= typeof telegram !== 'undefined' ? telegram : '#' %>'"
+      >
+        Suporte ao Cliente
+      </div>
 
-  <img
-    src="/images/banners/title.jpg"
-    alt="Promo Image"
-    class="promo-banner-img"
-  />
-</div>
-   <!-- Play/Login Condition Buttons -->
-<div class="mt-3">
-  <% if (money === false) { %>
+      <div class="powered-badge">
+        <span class="powered-badge-text">Desenvolvido por</span>
+        <img src="/images/banners/spribe.png" alt="Logo" />
+      </div>
 
-  <button class="game-btn login-btn" id="openLoginPopupBtnPlay">
-    Entre para Jogar
-  </button>
+      <img
+        src="/images/banners/spribebanner.jpg"
+        alt="Promo Image"
+        class="promo-banner-img"
+      />
+    </div>
+    <!-- Play/Login Condition Buttons -->
+    <div
+      class="mt-3"
+      style="
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      "
+    >
+      <% if (money === false) { %>
 
-  <% } else { %>
+      <button class="game-btn login-btn" id="openLoginPopupBtnPlay">
+        Entre para Jogar
+      </button>
 
-  <button
-    class="game-btn"
-    onclick="window.location.href='/aviator'"
-  >
-  Jogue Agora
-  </button>
+      <% } else { %>
 
-  <% } %>
-</div>
+      <button class="game-btn" onclick="window.location.href='/aviator'">
+        Jogue Agora
+      </button>
+
+      <% } %>
+
+      <div class="col-12 col-lg-4 offset-lg-1 mt-3 text-center">
+        <p class="text-grey-normal">
+          Aviator é um novo tipo de jogo social multiplayer que consiste em uma
+          curva crescente que pode cair a qualquer momento. Quando a rodada
+          começa, uma escala de multiplicadores começa a crescer. O jogador deve
+          sacar antes que o avião da sorte voe para longe.
+        </p>
+
+        <p class="text-grey-normal">
+          Originado da indústria de videogames, esse formato se tornou popular
+          em cassinos de criptomoedas devido à sua simplicidade e à experiência
+          de jogo emocionante.
+        </p>
+
+        <p class="text-grey-normal">
+          Estamos entre os pioneiros a introduzir esse jogo em cassinos online
+          tradicionais.
+        </p>
+      </div>
+    </div>
+    
+
+    <div _ngcontent-rmx-c78="" class="row text-center">
+      <div _ngcontent-rmx-c78="" class="col-12 col-lg-4">
+        <h3 _ngcontent-rmx-c78="" class="section-heading">
+          Envolvente e &amp; Social
+        </h3>
+        <p _ngcontent-rmx-c78="" class="text-grey-normal">
+          Aviator não é como outros jogos de cassino. Ele introduz elementos sociais e transforma os jogadores em parte de uma comunidade.
+        </p>
+        <!---->
+      </div>
+    </div>
+
+    <div _ngcontent-rmx-c78="" class="row mt-3">
+      <div
+        _ngcontent-rmx-c78=""
+        class="col-12 col-lg-3 description-column mt-5 mt-lg-3"
+      >
+        <app-feature _ngcontent-rmx-c78="" _nghost-rmx-c77=""
+          ><div _ngcontent-rmx-c77="" class="row">
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="av-icon-chat"></div>
+            </div>
+            <div _ngcontent-rmx-c77="" class="col-12 mt-3 text-center">
+              <h5 _ngcontent-rmx-c77="" class="text-black-normal">
+                Chat no Jogo
+              </h5>
+              <hr
+                _ngcontent-rmx-c77=""
+                align="left"
+                class="divider my-3 position-relative"
+                style="opacity: 0.25; border-color: rgb(220, 53, 69)"
+              />
+              <!---->
+            </div>
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="img-chat"></div>
+            </div>
+            <!---->
+            <div _ngcontent-rmx-c77="" class="col-12 text-center">
+              <p
+                _ngcontent-rmx-c77=""
+                class="text-grey-normal"
+                style="font-weight: normal"
+              >
+              O chat no jogo é uma ótima ferramenta para criar uma comunidade com jogadores fiéis.
+              </p>
+              <p
+                _ngcontent-rmx-c77=""
+                class="text-grey-normal"
+                style="font-weight: normal"
+              >
+              Também é uma nova camada de comunicação e um meio de marketing para o cassino.
+              </p>
+              <!---->
+            </div>
+          </div></app-feature
+        >
+      </div>
+      <div
+        _ngcontent-rmx-c78=""
+        class="col-12 col-lg-3 description-column mt-5 mt-lg-3 offset-lg-1"
+      >
+        <app-feature _ngcontent-rmx-c78="" _nghost-rmx-c77=""
+          ><div _ngcontent-rmx-c77="" class="row">
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="av-icon-bets"></div>
+            </div>
+            <div _ngcontent-rmx-c77="" class="col-12 mt-3 text-center">
+              <h5 _ngcontent-rmx-c77="" class="text-black-normal">Apostas ao Vivo</h5>
+              <hr
+                _ngcontent-rmx-c77=""
+                align="left"
+                class="divider my-3 position-relative"
+                style="opacity: 0.25; border-color: rgb(220, 53, 69)"
+              />
+              <!---->
+            </div>
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="img-bets"></div>
+            </div>
+            <!---->
+            <div _ngcontent-rmx-c77="" class="col-12 text-center">
+              <p
+                _ngcontent-rmx-c77=""
+                class="text-grey-normal"
+                style="font-weight: normal"
+              >
+              Todos podem ver quanto outros jogadores estão apostando e ganhando.
+              </p>
+              <!---->
+            </div>
+          </div></app-feature
+        >
+      </div>
+      <div
+        _ngcontent-rmx-c78=""
+        class="col-12 col-lg-3 description-column mt-5 mt-lg-3 offset-lg-1"
+      >
+        <app-feature _ngcontent-rmx-c78="" _nghost-rmx-c77=""
+          ><div _ngcontent-rmx-c77="" class="row">
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="av-icon-stats"></div>
+            </div>
+            <div _ngcontent-rmx-c77="" class="col-12 mt-3 text-center">
+              <h5 _ngcontent-rmx-c77="" class="text-black-normal">
+                Estatísticas ao Vivo
+              </h5>
+              <hr
+                _ngcontent-rmx-c77=""
+                align="left"
+                class="divider my-3 position-relative"
+                style="opacity: 0.25; border-color: rgb(220, 53, 69)"
+              />
+              <!---->
+            </div>
+            <div
+              _ngcontent-rmx-c77=""
+              class="col-12 d-flex flex-column align-items-center align-self-center align-items-lg-start"
+            >
+              <div _ngcontent-rmx-c77="" class="img-stats"></div>
+            </div>
+            <!---->
+            <div _ngcontent-rmx-c77="" class="col-12 text-center">
+              <p
+                _ngcontent-rmx-c77=""
+                class="text-grey-normal"
+                style="font-weight: normal"
+              >
+              Módulo de estatísticas no jogo com as maiores vitórias apresentadas como ranking diário, mensal ou de todos os tempos.
+              </p>
+              <!---->
+            </div>
+          </div></app-feature
+        >
+      </div>
+      <!---->
+    </div>
+
     <div class="withdrawal-box2">
       <div id="name">Carregando...</div>
       <div class="withdrawal-label2">Retirada Aprovada:</div>
       <span id="withdrawal" class="withdrawal-amount2">₹ ---</span>
     </div>
+
     <div class="footer">
       <img src="/images/banners/fff.png" alt="Footer Image" />
     </div>
-  
+
     <!-- ========================== -->
     <!-- Popup HTML Structure       -->
     <!-- ========================== -->
-    <div id="loginPopupOverlay" class="popup-overlay" >
+    <div id="loginPopupOverlay" class="popup-overlay">
       <div class="popup-content">
         <button class="popup-close-btn" id="closeLoginPopupBtn">×</button>
         <div id="authFormContainer">
@@ -1027,7 +1358,7 @@
                 <div class="signIn__container">
                   <div class="phoneInput__container">
                     <div class="phoneInput__container-label">
-                    <span>Número de telefone</span>
+                      <span>Número de telefone</span>
                     </div>
                     <div class="phoneInput__container-input">
                       <div class="dropdown">
@@ -1047,7 +1378,7 @@
                   </div>
                   <div class="passwordInput__container">
                     <div class="passwordInput__container-label">
-                     <span>Password</span>
+                      <span>Password</span>
                     </div>
                     <div class="passwordInput__container-input">
                       <input
@@ -1085,7 +1416,7 @@
                       id="popupLoginSubmitBtn"
                       style="border-radius: 30px"
                     >
-                    Entrar
+                      Entrar
                     </button>
                   </div>
                   <div class="forgetcon" style="align-items: center">
@@ -1099,7 +1430,7 @@
                       class="switchToRegister"
                       style="border-radius: 30px"
                     >
-                    Criar Conta
+                      Criar Conta
                     </button>
                   </div>
                 </div>
@@ -1142,18 +1473,31 @@
                         class=""
                         required
                       >
-                        <option value="" disabled selected class="Name__container-input">
+                        <option
+                          value=""
+                          disabled
+                          selected
+                          class="Name__container-input"
+                        >
                           Selecione o Gênero
                         </option>
-                        <option value="male" class="Name__container-input">Masculino</option>
-                        <option value="female" class="Name__container-input">Feminino</option>
-                        <option value="other" class="Name__container-input">Outro</option>
+                        <option value="male" class="Name__container-input">
+                          Masculino
+                        </option>
+                        <option value="female" class="Name__container-input">
+                          Feminino
+                        </option>
+                        <option value="other" class="Name__container-input">
+                          Outro
+                        </option>
                       </select>
                     </div>
                   </div>
 
                   <div class="Email__container">
-                    <div class="Email__container-label"><span>E-mail</span></div>
+                    <div class="Email__container-label">
+                      <span>E-mail</span>
+                    </div>
                     <div class="Email__container-input">
                       <input
                         type="text"
@@ -1161,7 +1505,6 @@
                         id="registerEmail"
                         placeholder="Enter Email"
                         required
-                        
                       />
                     </div>
                   </div>
@@ -1189,7 +1532,7 @@
                   </div>
                   <div class="passwordInput__container">
                     <div class="passwordInput__container-label">
-                     <span>Definir senha</span>
+                      <span>Definir senha</span>
                     </div>
                     <div class="passwordInput__container-input">
                       <input
@@ -1373,7 +1716,6 @@
     <!-- ========================== -->
     <!-- 1. jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
 
     <!-- 2. Your existing home page scripts (sidebar, dummy data interval) -->
     <script>
@@ -1667,55 +2009,57 @@
             }
             if ($loadingOverlay.length) $loadingOverlay.fadeIn(10);
             $.ajax({
-  type: "POST",
-  url: "/api/webapi/login",
-  data: { username: username, pwd: password },
-  dataType: "json",
-  success: function (response) {
-    if (response.status === true) {
-      setCookie("token", response.token, 1);
-      setCookie("auth", response.value, 1);
+              type: "POST",
+              url: "/api/webapi/login",
+              data: { username: username, pwd: password },
+              dataType: "json",
+              success: function (response) {
+                if (response.status === true) {
+                  setCookie("token", response.token, 1);
+                  setCookie("auth", response.value, 1);
 
-      // Now, get the user info to check if admin or not
-      $.ajax({
-        type: "GET",
-        url: "/api/webapi/GetUserInfo",
-        dataType: "json",
-        success: function (userinfo) {
-          if (userinfo.status === true) {
-            if ($loadingOverlay.length) $loadingOverlay.fadeOut(100);
-            $loginPopupOverlay.fadeOut(200, function () {
-              if (userinfo.data.name_user === "Admin") {
-                // If admin, redirect
-                window.location.href = "/admin/manager/aviator";
-              } else {
-                // If normal user, reload
-                window.location.reload();
-              }
+                  // Now, get the user info to check if admin or not
+                  $.ajax({
+                    type: "GET",
+                    url: "/api/webapi/GetUserInfo",
+                    dataType: "json",
+                    success: function (userinfo) {
+                      if (userinfo.status === true) {
+                        if ($loadingOverlay.length)
+                          $loadingOverlay.fadeOut(100);
+                        $loginPopupOverlay.fadeOut(200, function () {
+                          if (userinfo.data.name_user === "Admin") {
+                            // If admin, redirect
+                            window.location.href = "/admin/manager/aviator";
+                          } else {
+                            // If normal user, reload
+                            window.location.reload();
+                          }
+                        });
+                      } else {
+                        if ($loadingOverlay.length)
+                          $loadingOverlay.fadeOut(300);
+                        alertMessPopup(
+                          userinfo.message || "Failed to get user info."
+                        );
+                      }
+                    },
+                    error: function () {
+                      if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
+                      alertMessPopup("Error getting user info.");
+                    },
+                  });
+                } else {
+                  if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
+                  alertMessPopup(response.message || "Invalid credentials.");
+                }
+              },
+              error: function (jqXHR) {
+                console.error("Login AJAX Error:", jqXHR.statusText);
+                if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
+                alertMessPopup("Login failed. Please try again.");
+              },
             });
-          } else {
-            if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
-            alertMessPopup(userinfo.message || "Failed to get user info.");
-          }
-        },
-        error: function () {
-          if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
-          alertMessPopup("Error getting user info.");
-        }
-      });
-
-    } else {
-      if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
-      alertMessPopup(response.message || "Invalid credentials.");
-    }
-  },
-  error: function (jqXHR) {
-    console.error("Login AJAX Error:", jqXHR.statusText);
-    if ($loadingOverlay.length) $loadingOverlay.fadeOut(300);
-    alertMessPopup("Login failed. Please try again.");
-  }
-});
-
           });
         }
 
@@ -1747,7 +2091,7 @@
               username,
               password,
               phone,
-             
+
               "yjhkl;ghjklfghjknlmfghjknl"
             );
             //  if (!/^\d{10}$/.test(username)) { alertMessPopup("Please enter a valid 10-digit phone number."); return; }
@@ -1941,26 +2285,27 @@
         }
       }); // End of $(document).ready()
     </script>
-     <script src="/Aviator/js/jquery.min.js"></script>
+    <script src="/Aviator/js/jquery.min.js"></script>
 
-     <!--====== Bootstrap js ======-->
-     <script src="/Aviator/js/popper.min.js"></script>
-     <script src="/Aviator/js/bootstrap.bundle.min.js"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="/Aviator/js/popper.min.js"></script>
+    <script src="/Aviator/js/bootstrap.bundle.min.js"></script>
 
-     <!--====== Slimscroll js ======-->
-     <!--<script src="/js/jquery.mCustomScrollbar.js"></script>-->
-     <script
-         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--====== Slimscroll js ======-->
+    <!--<script src="/js/jquery.mCustomScrollbar.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+    <!--====== Country Selection js ======-->
+    <script src="Aviator/js/niceCountryInput.js"></script>
+    <script
+      src="/Aviator/js/jquery.ccpicker.js"
+      type="text/javascript"
+    ></script>
 
-     <!--====== Country Selection js ======-->
-     <script src="Aviator/js/niceCountryInput.js"></script>
-     <script src="/Aviator/js/jquery.ccpicker.js" type="text/javascript"></script>
+    <!--====== Animation Selection js ======-->
+    <script src="/Aviator/js/anime.min.js"></script>
 
-     <!--====== Animation Selection js ======-->
-     <script src='/Aviator/js/anime.min.js'></script>
-
-     <!--====== Owl Carousel js ======-->
-     <script src='/Aviator/js/owl.carousel.min.js'></script>
+    <!--====== Owl Carousel js ======-->
+    <script src="/Aviator/js/owl.carousel.min.js"></script>
   </body>
 </html>
