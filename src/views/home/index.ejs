@@ -1330,7 +1330,7 @@
     <div class="withdrawal-box2">
       <div id="name">Carregando...</div>
       <div class="withdrawal-label2">Retirada Aprovada:</div>
-      <span id="withdrawal" class="withdrawal-amount2">₹ ---</span>
+      <span id="withdrawal" class="withdrawal-amount2">€ ---</span>
     </div>
 
     <div class="footer">
@@ -1756,12 +1756,12 @@
 
       // Dummy Withdrawal Data Logic
       const dummyData = [
-        { name: "isha S.", amount: "113645" },
-        { name: "Sunil K.", amount: "98650" },
-        { name: "neha M.", amount: "124300" },
-        { name: "Pmit P.", amount: "75300" },
-        { name: "Pooja R.", amount: "145600" },
-        { name: "Om B.", amount: "84500" },
+        { name: "António", amount: "113645" },
+        { name: "Paulo", amount: "98650" },
+        { name: "Ricardo", amount: "124300" },
+        { name: "Luísa", amount: "75300" },
+        { name: "Júlia", amount: "145600" },
+        { name: "Gabriel", amount: "84500" },
       ];
       let currentIndex = 0;
       const nameEl = document.getElementById("name");
@@ -1774,7 +1774,7 @@
           });
           $(withdrawalEl).fadeOut(300, function () {
             $(this)
-              .text("₹ " + parseInt(data.amount).toLocaleString("en-IN"))
+              .text("€ " + parseInt(data.amount).toLocaleString("en-IN"))
               .fadeIn(300);
           });
           currentIndex = (currentIndex + 1) % dummyData.length;
