@@ -16,11 +16,12 @@ const mysql = require('mysql2/promise');
 // const mysql = require('mysql2/promise');
 
 const connection = mysql.createPool({
-  host: '127.0.0.1',  // or '127.0.0.1'
-  user: 'root',
-  password: '',
+  host: '127.0.0.1',
+  user: 'bruser',
+  password: 'StrongPass123',
   database: 'brdb'
 });
+
 
 // const connection = mysql.createPool({
 //     host: 'localhost',
@@ -31,4 +32,5 @@ const connection = mysql.createPool({
 // });
 
 module.exports = connection;
+
 
