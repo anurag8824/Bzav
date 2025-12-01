@@ -546,7 +546,7 @@
                                             <div class="column-2">
                                                 <button
                                                     class="btn btn-transparent previous-history d-flex align-items-center mx-auto fw-normal">
-                                                    <%= item.amount %>₹
+                                                    <%= item.amount %>€
                                                 </button>
                                             </div>
                                             <div class="column-3">
@@ -562,7 +562,7 @@
                                             </div>
                                             <div class="column-4 fw-normal">
                                                 <% if (parseFloat(item.crash)>= 1) { %>
-                                                    <%= item.amount * item.crash %>₹
+                                                    <%= item.amount * item.crash %>€
                                                         <% } %>
                                             </div>
                                         </div>
@@ -706,16 +706,16 @@
                                         <div class="bets-opt-list">
                                             <button class="btn btn-secondary btn-sm bet-opt main_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">100</span><span class="currency">₹</span></button>
+                                                    class="amt">100</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt main_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">200</span><span class="currency">₹</span></button>
+                                                    class="amt">200</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt main_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">500</span><span class="currency">₹</span></button>
+                                                    class="amt">500</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt main_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">1000</span><span class="currency">₹</span></button>
+                                                    class="amt">1000</span><span class="currency">€</span></button>
                                         </div>
                                     </div>
                                     <div class="buttons-block" id="bet_button">
@@ -821,23 +821,23 @@
                                         <div class="bets-opt-list">
                                             <button class="btn btn-secondary btn-sm bet-opt extra_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">100</span><span class="currency">₹</span></button>
+                                                    class="amt">100</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt extra_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">200</span><span class="currency">₹</span></button>
+                                                    class="amt">200</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt extra_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">500</span><span class="currency">₹</span></button>
+                                                    class="amt">500</span><span class="currency">€</span></button>
                                             <button class="btn btn-secondary btn-sm bet-opt extra_amount_btn"
                                                 onclick="select_direct_bet_amount(this);"><span
-                                                    class="amt">1000</span><span class="currency">₹</span></button>
+                                                    class="amt">1000</span><span class="currency">€</span></button>
                                         </div>
                                     </div>
                                     <div class="buttons-block" id="bet_button">
                                         <button
                                             class="btn btn-success bet font-family-title ng-star-inserted main_bet_btn"
                                             id="extra_bet_now" onclick="bet_now(this, 1);"><label
-                                                class="font-family-title label">BET</label></button>
+                                                class="font-family-title label">Aposta</label></button>
                                     </div>
                                     <div class="buttons-block" id="cancle_button" style="display: none;">
                                         <div class="btn-tooltip f-14 mb-1" id="waiting" style="display: none;">Waiting
@@ -922,15 +922,15 @@
                         <ul class="list-unstyled limit-rules">
                             <li class="list-group-item">
                                 Minimum Bet:
-                                <span class="badge badge-success px-2 font-family-number">10 ₹ </span>
+                                <span class="badge badge-success px-2 font-family-number">10 € </span>
                             </li>
                             <li class="list-group-item">
                                 Maximum Bet:
-                                <span class="badge badge-success px-2 font-family-number">8000 ₹ </span>
+                                <span class="badge badge-success px-2 font-family-number">8000 € </span>
                             </li>
                             <li class="list-group-item">
                                 Maximum win for one bet:
-                                <span class="badge badge-success px-2 font-family-number">800000 ₹ </span>
+                                <span class="badge badge-success px-2 font-family-number">800000 € </span>
                             </li>
                         </ul>
                     </div>
@@ -1379,5 +1379,6 @@
         </script>
 
 </body>
+
 
 </html>
