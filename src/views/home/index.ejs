@@ -48,6 +48,9 @@
       href="Aviator/css/jquery.ccpicker.css"
     />
 
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="/Aviator/css/bootstrap.css" />
 
@@ -1082,6 +1085,24 @@
 
     gtag("config", "G-99RTD5DZML");
   </script>
+
+
+<script>
+  // Get the Confirm button element
+  const confirmButton = document.querySelector('.van-dialog__confirm');
+
+  // Get the dialog content element
+  const dialogContent = document.querySelector('.van-popup');
+
+  // Add click event listener to the Confirm button
+  confirmButton.addEventListener('click', function () {
+      // Hide the dialog content when Confirm button is clicked
+      dialogContent.style.display = 'none';
+  });
+</script>
+
+
+
   <body
     style="
       background-image: url(shooting_star.gif);
@@ -1091,6 +1112,165 @@
       padding: 0px 2px;
     "
   >
+
+
+  <div id="identity-popup" style="
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.6);
+z-index:1000;
+justify-content:center;
+align-items:center;
+">
+
+  <div style="
+  background:#021341;
+  padding:20px;
+  border-radius:12px;
+  width:90%;
+  max-width:320px;
+  text-align:center;
+  color:white;
+  ">
+
+    <h4 style="margin-bottom:10px;">Verificar Identidade</h4>
+    <p style="font-size:13px;margin-bottom:15px;">
+      Envie qualquer imagem válida de identificação
+    </p>
+
+    <input type="file" id="identityImage" accept="image/*" style="
+      width:100%;
+      margin-bottom:15px;
+      color:white;
+    ">
+
+    <button id="identitySubmit" style="
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:6px;
+      background:#4a8bff;
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+    ">
+      Enviar
+    </button>
+
+  </div>
+</div>
+
+
+
+
+  <div id="popup-overlay" style="
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  ">
+  <!-- Popup Box -->
+  <div style="
+    background: #021341;
+    padding: 30px 6px;
+    border-radius: 12px;
+    width: 90%;
+    font-weight: 200;
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+  ">
+    <spam style="margin-bottom: 15px; color: white; font-size: medium;">Bônus Extra no Primeiro Depósito</spam>
+    <p style="margin-bottom: 25px; color: #ffffff; font-size: small;">
+      Cada conta pode receber a recompensa apenas uma vez
+    </p>
+  
+    <% const depositOptions = [
+    { amount: 500, bonus: 28 },
+    { amount: 1000, bonus: 38 },
+    { amount: 1500, bonus: 208 },
+    { amount: 2000, bonus: 388 }
+  ]; %>
+  
+  
+  <div style="height: 500px;
+      overflow-y: scroll;">
+  
+    <% depositOptions.forEach(option => { %>
+      <div class="rounded p-1 mb-1" style="max-width: 350px; color: white; font-size: 14px; background-color: #001C54;">
+        <div class="d-flex justify-content-between align-items-center mb-1">
+          <span>Primeiro Depósito <span class="text-warning"><%= option.amount %></span></span>
+          <span class="text-warning fw-bold">+<%= option.bonus.toFixed(2) %></span>
+        </div>
+    
+        <div style="text-align: left; font-size:small" class="text-light mb-1">
+          Deposite <%= option.amount %> pela primeira vez e receba <%= option.bonus %> de bônus
+        </div>
+    
+        <div class="d-flex justify-content-between align-items-center py-1">
+          <span class="rounded" style="font-size: 12px; width: 180px; background: #06012A; color: white;">
+            0 / <%= option.amount %>
+          </span>
+          <button onclick="window.location.href='/wallet/paynow/manual_upi?am=<%= option.amount %>'"
+                  class="text-warning"
+                  style="background-color: #ffffff00; border: 1px solid #ffc107; border-radius: 5px; font-size: 14px; padding: 1px 22px;">
+                  Deposite
+          </button>
+        </div>
+      </div>
+    <% }) %>
+  
+  </div>
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    <div style="display: flex; justify-content: space-between;">
+      <button onclick="document.getElementById('popup-overlay').style.display = 'none'" style="
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        background-color: #ccc;
+        color: #333;
+        font-weight: bold;
+        cursor: pointer;
+        width: 45%;
+      ">Close</button>
+  
+      <button onclick="window.location.href='/wallet/recharge'" style="
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        background: rgb(71, 129, 255);
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        width: 45%;
+      ">Deposit Now</button>
+    </div>
+  
+    <!-- <div style="color: #fff; font-size: 20px">X</div> -->
+  
+  </div>
+  </div>
+
+
+
     <!-- =============================== -->
     <!-- Existing Home Page Content      -->
     <!-- =============================== -->
@@ -1363,13 +1543,13 @@
                     <div class="phoneInput__container-input">
                       <div class="dropdown">
                         <div class="dropdown__value">
-                          <span>+91</span><i>▼</i>
+                          <!-- <span>+91</span><i>▼</i> -->
                         </div>
                       </div>
                       <input
                         type="text"
                         name="username"
-                        placeholder="Enter 10-digit number"
+                        placeholder="Digite um número de 10 dígitos"
                         required
                         pattern="\d{10}"
                         title="10-digit phone number"
@@ -1378,13 +1558,13 @@
                   </div>
                   <div class="passwordInput__container">
                     <div class="passwordInput__container-label">
-                      <span>Password</span>
+                      <span>Digite a senha</span>
                     </div>
                     <div class="passwordInput__container-input">
                       <input
                         id="passwordfield"
                         type="password"
-                        placeholder="Enter Password"
+                        placeholder="Digite a senha"
                         required
                       />
                       <span
@@ -1456,7 +1636,7 @@
                         type="text"
                         name="registerName"
                         id="registerName"
-                        placeholder="Enter Name"
+                        placeholder="Digite o Nome"
                         title="10-digit phone number"
                       />
                     </div>
@@ -1496,14 +1676,14 @@
 
                   <div class="Email__container">
                     <div class="Email__container-label">
-                      <span>E-mail</span>
+                      <span>Digite o E-mail</span>
                     </div>
                     <div class="Email__container-input">
                       <input
                         type="text"
                         name="registerEmail"
                         id="registerEmail"
-                        placeholder="Enter Email"
+                        placeholder="Digite o E-mail"
                         required
                       />
                     </div>
@@ -1516,14 +1696,14 @@
                     <div class="phoneInput__container-input">
                       <div class="dropdown">
                         <div class="dropdown__value">
-                          <span>+91</span><i>▼</i>
+                          <!-- <span>+91</span><i>▼</i> -->
                         </div>
                       </div>
                       <input
                         type="text"
                         name="registerUsername"
                         id="registerPhone"
-                        placeholder="Enter 10-digit number"
+                        placeholder="Digite um número de 10 dígitos"
                         required
                         pattern="\d{10}"
                         title="10-digit phone number"
@@ -1539,7 +1719,7 @@
                         name="registerPassword"
                         id="registerPassword"
                         type="password"
-                        placeholder="Enter password"
+                        placeholder="Digite a senha"
                         required
                       />
                       <span
@@ -1600,7 +1780,7 @@
                         src="/images/phone.png"
                         class="mobile"
                     /></span>
-                    <div class="p-l-5">+91</div>
+                    <!-- <div class="p-l-5">+91</div> -->
                   </div>
                   <input
                     id="forgotUsername"
@@ -2286,6 +2466,184 @@
       }); // End of $(document).ready()
     </script>
     <script src="/Aviator/js/jquery.min.js"></script>
+
+<!-- 
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const response = await axios.get('/api/webapi/GetUserInfo');
+          const user = response?.data?.data;
+          console.log("User Info:", user);
+    
+          if (!user?.first_recharge) {
+            // Show popup if user has not done first recharge
+            document.getElementById('popup-overlay').style.display = 'flex';
+          }
+        } catch (error) {
+          console.error('Error checking user info:', error);
+        }
+      });
+    </script> -->
+
+
+    <!-- //old wala jhn page ate hi pop up  -->
+
+    <!-- <script>
+      const IDENTITY_KEY = "identity";
+      const ONE_MONTH = 30 * 24 * 60 * 60 * 1000;
+    
+      function getIdentityStatus() {
+        const data = localStorage.getItem(IDENTITY_KEY);
+        if (!data) return false;
+    
+        try {
+          const parsed = JSON.parse(data);
+          if (Date.now() > parsed.expiry) {
+            localStorage.removeItem(IDENTITY_KEY);
+            return false;
+          }
+          return parsed.value === true;
+        } catch {
+          return false;
+        }
+      }
+    
+      function setIdentityTrue() {
+        localStorage.setItem(
+          IDENTITY_KEY,
+          JSON.stringify({
+            value: true,
+            expiry: Date.now() + ONE_MONTH
+          })
+        );
+      }
+    
+      async function checkFirstRecharge() {
+        try {
+          const response = await axios.get('/api/webapi/GetUserInfo');
+          const user = response?.data?.data;
+    
+          if (!user?.first_recharge) {
+            document.getElementById('popup-overlay').style.display = 'flex';
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        const identityPopup = document.getElementById('identity-popup');
+        const submitBtn = document.getElementById('identitySubmit');
+    
+        if (!getIdentityStatus()) {
+          // 🔴 Identity popup FIRST
+          identityPopup.style.display = "flex";
+        } else {
+          // 🟢 Identity OK → check first recharge
+          checkFirstRecharge();
+        }
+    
+        submitBtn.addEventListener('click', () => {
+          const file = document.getElementById('identityImage').files[0];
+    
+          if (!file) {
+            alert("Please upload identity image");
+            return;
+          }
+    
+          // image upload nahi karni, sirf validation
+          setIdentityTrue();
+          identityPopup.style.display = "none";
+    
+          // ab first recharge popup check hoga
+          checkFirstRecharge();
+        });
+      });
+    </script> -->
+    
+
+
+    <script>
+      const IDENTITY_KEY = "identity";
+      const ONE_MONTH = 30 * 24 * 60 * 60 * 1000;
+    
+      function getIdentityStatus() {
+        const data = localStorage.getItem(IDENTITY_KEY);
+        if (!data) return false;
+    
+        try {
+          const parsed = JSON.parse(data);
+          if (Date.now() > parsed.expiry) {
+            localStorage.removeItem(IDENTITY_KEY);
+            return false;
+          }
+          return parsed.value === true;
+        } catch {
+          return false;
+        }
+      }
+    
+      function setIdentityTrue() {
+        localStorage.setItem(
+          IDENTITY_KEY,
+          JSON.stringify({
+            value: true,
+            expiry: Date.now() + ONE_MONTH
+          })
+        );
+      }
+    
+      async function afterLoginChecks() {
+        try {
+          const response = await axios.get('/api/webapi/GetUserInfo');
+          const user = response?.data?.data;
+
+          console.log("After Login User Info:", user);
+    
+          // ❌ Not logged in → kuch bhi nahi
+          if (!user || !user.phone_user) return;
+    
+          const identityPopup = document.getElementById('identity-popup');
+    
+          // 🔴 Identity check FIRST
+          if (!getIdentityStatus()) {
+            identityPopup.style.display = "flex";
+            return; // ⛔ first recharge abhi nahi
+          }
+    
+          // 🟢 Identity OK → First Recharge check
+          if (!user.first_recharge) {
+            document.getElementById('popup-overlay').style.display = 'flex';
+          }
+    
+        } catch (err) {
+          console.error("Login check failed:", err);
+        }
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        const submitBtn = document.getElementById('identitySubmit');
+    
+        submitBtn.addEventListener('click', () => {
+          const file = document.getElementById('identityImage').files[0];
+    
+          if (!file) {
+            alert("Please upload identity image");
+            return;
+          }
+    
+          setIdentityTrue();
+          document.getElementById('identity-popup').style.display = "none";
+    
+          // identity submit ke baad hi first recharge check
+          afterLoginChecks();
+        });
+    
+        // 🔥 ONLY place where check starts
+        afterLoginChecks();
+      });
+    </script>
+    
 
     <!--====== Bootstrap js ======-->
     <script src="/Aviator/js/popper.min.js"></script>
