@@ -145,17 +145,17 @@ const addManualUPIPaymentRequest = async (req, res) => {
 
         const url = 'https://www.lg-pay.com/api/order/create';
         // const key = 'VN8NHNnda0Rn72UqeIvTwhQuEV2yXVcn';
-               const key = 'O2UyHC65eofVs2xsGCjDzY2qVbybifea';
+               const key = 'NsFxRd84HqWkhrKWQdL9qEYfwjFY06jA';
 
-        const app_id = 'YD4555';
+        const app_id = 'BX3089';
        //YD4569
         const params = {
             app_id,
-            trade_type: 'INRUPI',      //INRUPI         // test channel for collection
+            trade_type: "BRLPIX",      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
             money: moneyp * 100,                // order amount
-            notify_url: 'https://jalwa.cash/callback', // your callback URL
-            return_url: 'https://jalwa.cash/home', // user redirect URL
+            notify_url: 'https://crashaviador.site/callback', // your callback URL
+            return_url: 'https://crashaviador.site/home', // user redirect URL
             subject: 'Test Order'            // order description
         };
 
@@ -905,7 +905,7 @@ const callbackfromgateway = async (req, res) => {
         } = req.body;
 
         // const key = 'VN8NHNnda0Rn72UqeIvTwhQuEV2yXVcn'; // your secret key
-            const key = 'O2UyHC65eofVs2xsGCjDzY2qVbybifea';
+            const key = 'NsFxRd84HqWkhrKWQdL9qEYfwjFY06jA';
 
 
         // 1. Verify the sign
@@ -948,7 +948,7 @@ const callbackfromgateway = async (req, res) => {
         //     msg
         // });
 
-       const resdata =  await axios.post("https://wongo.site/api/webapi/admin/rechargeDuyet",{
+       const resdata =  await axios.post("https://crashaviador.site/api/webapi/admin/rechargeDuyet",{
             id:rows[0]?.id,
             type:"confirm"
         })
@@ -981,4 +981,5 @@ module.exports = {
     addManualUSDTPaymentRequest,
     initiateManualUSDTPayment,
     callbackfromgateway,
+
 }
