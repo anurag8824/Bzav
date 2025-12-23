@@ -153,8 +153,8 @@ $(document).ready(function () {
     } else {
         music.pause();
     }
-    $("#wallet_balance").text(currency_symbol + wallet_balance); // Show Wallet Balance
-    $("#header_wallet_balance").text(currency_symbol + wallet_balance); // Show Header Wallet Balance
+    $("#wallet_balance").text("€" + wallet_balance); // Show Wallet Balance
+    $("#header_wallet_balance").text("€" + wallet_balance); // Show Header Wallet Balance
 });
 
 function info_data(intialData) {

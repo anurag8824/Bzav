@@ -656,7 +656,7 @@ const [betHistory] = await connection.execute(
     res.render('aviator.ejs', {
         csrfToken: 'your_csrf_token',
         user: {
-            currency: '₹',
+            currency: '€',
             id: 12345,
         },
         wallet: user[0]?.win_wallet,
