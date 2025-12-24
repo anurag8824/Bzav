@@ -516,14 +516,10 @@
          </nav>
 
          <!-- UPI Section -->
-         <section class="upi-section">
-             <!-- IMPORTANT: Update UPI logo path -->
-            <img src="/images/upi.png" alt="UPI Logo" />
-         </section>
-
+         
          <!-- Recharge Form Section -->
          <section class="recharge-form-section">
-            <p class="minimum-recharge">Recarga Mínima: <span id="min-recharge-amount">500</span></p>
+            <p class="minimum-recharge">Recarga Mínima: <span id="min-recharge-amount">30</span></p>
 
             <div class="amount-input-group">
                <input type="number" id="amount-input" placeholder="500+" value="1000" class="amount-input" inputmode="numeric"/>
@@ -532,17 +528,15 @@
             </div>
 
             <div class="preset-amounts" id="preset-amounts-container">
-               <button class="preset-amount-btn" data-amount="500">500</button>
-               <button class="preset-amount-btn active" data-amount="1000">1000</button>
-               <button class="preset-amount-btn" data-amount="2000">2000</button>
-               <button class="preset-amount-btn" data-amount="5000">5000</button>
-               <button class="preset-amount-btn" data-amount="10000">10000</button>
-               <button class="preset-amount-btn" data-amount="20000">20000</button>
-               <button class="preset-amount-btn" data-amount="50000">50000</button>
-               <button class="preset-amount-btn" data-amount="95000">95000</button>
+               <button class="preset-amount-btn" data-amount="30">30</button>
+               <button class="preset-amount-btn active" data-amount="1000">50</button>
+               <button class="preset-amount-btn" data-amount="2000">100</button>
+               <button class="preset-amount-btn" data-amount="5000">200</button>
+               <button class="preset-amount-btn" data-amount="10000">500</button>
+               
             </div>
 
-            <p class="selected-amount-display">Selecione o Valor da Recarga: €<span id="selected-amount-value">1000</span></p>
+            <p class="selected-amount-display">Selecione o Valor da Recarga: €<span id="selected-amount-value">50</span></p>
          </section>
 
          <!-- Footer -->
@@ -627,11 +621,11 @@
 
          // --- Configuration ---
          // IMPORTANT: Set your actual minimum or fetch it from backend if dynamic
-         let minimumMoneyAllowed = 500;
+         let minimumMoneyAllowed = 30;
          // You might want to fetch this value from the backend if it changes
          // Example: minimumMoneyAllowed = parseInt('<%= MinimumMoney || 500 %>');
 
-         let currentAmount = 1000; // Default amount
+         let currentAmount = 50; // Default amount
 
          // --- Functions ---
 
@@ -841,3 +835,4 @@
       </script>
    </body>
 </html>
+
