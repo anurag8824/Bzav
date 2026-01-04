@@ -153,7 +153,7 @@ const addManualUPIPaymentRequest = async (req, res) => {
             app_id,
             trade_type: "BRLPIX",      //INRUPI         // test channel for collection
             order_sn: orderId,  // unique order number
-            money: moneyp * 100,                // order amount
+            money: moneyp,                // order amount
             notify_url: 'https://crashaviador.site/callback', // your callback URL
             return_url: 'https://crashaviador.site/home', // user redirect URL
             subject: 'Test Order'            // order description
