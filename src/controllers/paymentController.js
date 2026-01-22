@@ -733,7 +733,7 @@ const verifyWowPayPayment = async (req, res) => {
 
 // helpers ---------------
 const getUserDataByAuthToken = async (authToken) => {
-    let [users] = await connection.query('SELECT `phone`, `code`,`name_user`,`invite` FROM users WHERE `token` = ? ', [authToken]);
+    let [users] = await connection.query('SELECT `phone`, `code`,`name_user`,`invite`,`name_user`,`ip_address` FROM users WHERE `token` = ? ', [authToken]);
     const user = users?.[0]
 
 
